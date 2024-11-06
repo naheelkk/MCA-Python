@@ -9,19 +9,16 @@
 # total mark >= 50 -P                                                                       |
 # Delete Roll NO.                                                                           |
 #-------------------------------------------------------------------------------------------#
-
 Bibi = {
-    "name" : "Bibi",
-    "roll.no" : "18",
-    "reg.no" : "20150",
-    "Department" : "History",
-    "Semester" : 8,   
+    "name" : input('Enter the name '),
+    "roll.no" : input('Enter your roll number '),
+    "reg.no" : input('Enter your register number '),
+    "Department" : input('Enter your Department '),
+    "Semester" : input('Enter your Current Semester '),   
 }
-marks = []
-subjects = 6
 print(f'Before Updating Marks\n{Bibi}')
 print()
-Bibi.update({"total_mark" : 76})
+Bibi.update({"total_mark" : int(input("Enter your mark out of 100 "))})
 print(f'After updating Marks\n{Bibi}')
 print()
 def calculateGrade(total_mark):
