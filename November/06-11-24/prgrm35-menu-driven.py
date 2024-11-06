@@ -4,31 +4,53 @@
 # 2.sort list in ascending order
 # 3.create another list of even numbers
 #----------------------------------------------------------------------------#
-size = int(input("Enter Size of your list"))
-lst = []
-print('Enter elements')
-
-for i in range(size):
-    ele = int(input())
-    lst.append(ele);
-
-user_input = int(input("Enter Choice From 1 - 3 "))
-
-def Switch(self,user_input,lst):
-    if user_input == 1:
-        return max(lst), min(lst)
-    elif user_input == 2:
-        return lst.sort()
-    elif user_input == 3:
-        return even_number_list(size)
-    # elif user_input == 4:
+def find_greatest_and_lowest(numbers):
+    if numbers:
+        greatest = max(numbers)
+        lowest = min(numbers)
+        print(f"Greatest number: {greatest}")
+        print(f"Lowest number: {lowest}")
     else:
-        return 'Wrong Choice'
+        print("The list is empty.")
 
-def even_number_list(size):
-    lst = []
-    for i in range(size):
-        if i % 2 != 0:
-            continue
+def sort_list(numbers):
+    sorted_numbers = sorted(numbers)
+    print("Sorted list in ascending order:", sorted_numbers)
+
+def create_even_list(numbers):
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    print("List of even numbers:", even_numbers)
+
+def main():
+    numbers = []
+    
+    n = int(input("Enter the number of elements: "))
+
+    for i in range(n):
+        num = int(input(f"Enter number {i+1}: "))
+        numbers.append(num)
+    
+    while True:
+        print("\nMenu:")
+        print("1. Find greatest and lowest")
+        print("2. Sort list in ascending order")
+        print("3. Create another list of even numbers")
+        print("4. Exit")
+        
+        choice = int(input("Enter your choice: "))
+        
+        if choice == 1:
+            find_greatest_and_lowest(numbers)
+        elif choice == 2:
+            sort_list(numbers)
+        elif choice == 3:
+            create_even_list(numbers)
+        elif choice == 4:
+            print("Exiting program.")
+            break
         else:
-            lst.append(i)
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+t.append(i)
