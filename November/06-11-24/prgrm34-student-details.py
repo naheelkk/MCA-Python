@@ -1,5 +1,5 @@
 #------------------------------------------------------------------------------------------#
-# a dict to repr. det. of a stud.(name,rollno.,reg.no., dep., sem., )                             |
+# a dict to repr. det. of a stud.(name,rollno.,reg.no., dep., sem., )                       |
 # add new element total mark                                                                |
 # based on total mark find grade of student                                                 |
 # total mark >= 90 -A                                                                       |
@@ -19,8 +19,11 @@ Bibi = {
 }
 marks = []
 subjects = 6
+print(f'Before Updating Marks\n{Bibi}')
+print()
 Bibi.update({"total_mark" : 76})
-print(Bibi)
+print(f'After updating Marks\n{Bibi}')
+print()
 def calculateGrade(total_mark):
     if total_mark >= 90:
         return 'A'
@@ -34,7 +37,7 @@ def calculateGrade(total_mark):
         return 'P'
     
 Bibi['grade'] = calculateGrade(Bibi['total_mark'])
-print(Bibi)
+print(f'After adding Grade\n{Bibi}\n')
 print('After Deleting')
 del Bibi["roll.no"]
-print(Bibi)
+print(f'\n{Bibi}')
