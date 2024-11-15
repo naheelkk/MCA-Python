@@ -1,4 +1,4 @@
-from Math-Functions-Package import *
+from MathFunctions import factorial, fibo
 
-print(fibo(10))
-print(fact(9))
+print(factorial.fact(5))
+print(fibo.fibo(10))
