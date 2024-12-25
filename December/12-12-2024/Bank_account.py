@@ -36,7 +36,7 @@ class BankAccount:
 id = 200
 name = "Steven Smith"
 acc_type  = "Savings"
-obj1 = BankAccount(id,name,acc_type,balance = 709)
+obj1 = BankAccount(id,name,acc_type,balance = 78016)
 obj1.display()
 obj1.deposit()
 obj1.withdraw()

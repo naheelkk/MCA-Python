@@ -15,7 +15,7 @@ class Rectangle():
     def get_area(self):
         return self.get_width() * self.get_length()
     def __lt__(self, other):
-        if(self.get_area()<other.get_area()):
+        if(self.get_area()< other.get_area()):
             return "1st Rectangle is Smaller."
         else:
             return "2nd Rectangle is Smaller."
