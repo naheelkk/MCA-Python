@@ -7,10 +7,10 @@ class Publisher:
                 super().__init__(name)
                 self.title = title
                 self.author = author
-                def show_Details(self):
-                    print(f"Publisher : {self.name}")
-                    print(f"Title : {self.title}")
-                    print(f"Author : {self.author}")
+            def show_Details(self):
+                print(f"Publisher : {self.name}")
+                print(f"Title : {self.title}")
+                print(f"Author : {self.author}")
     class Python(Book):
         def __init__(self, name, title, author, price, no_of_pages):
             super().__init__(name, title, author) #Base class constructor invocation
